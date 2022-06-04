@@ -19,9 +19,9 @@ const swaggerSpecs = swaggerJsDoc(swaggerOptions);
 app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerSpecs));
 
 app.get("", (req: Request, res: Response) => {
-	res.status(200).send("Hello World");
+	res.status(200).send("Hello World!");
 });
 
 app.listen(PORT, () => {
-	console.log(`started at port ${PORT}`);
+	console.log(`started at port http://localhost:${PORT}`);
 });

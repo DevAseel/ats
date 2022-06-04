@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p .",
-    "start": "tsc -p . && node dist/index.js"
+    "start:ts": "tsc -w",
+    "start:js": "nodemon dist/index.js",
+    "start": "concurrently npm:start:*"
+
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "eslint": "^8.16.0",
+    "nodemon": "^2.0.16",
     "prettier": "2.6.2",
     "prisma": "^3.14.0"
   },
